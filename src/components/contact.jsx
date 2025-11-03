@@ -2,7 +2,6 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
-import { FaGlobe } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -12,25 +11,23 @@ function Contact() {
           CONTACT
         </div>
       </div>
-      <div
-        className="row m-2"
-        style={{ borderBottom: "2px solid black", padding: 0 }}
+<div
+  className="row m-2 d-flex align-items-center" // Add d-flex and align-items-center
+  style={{ borderBottom: "2px solid black", padding: 0 }}
+>
+  <div className="col-12 d-flex align-items-center"> {/* Use col-12, then apply flex to the inner content */}
+      <FaLinkedin style={{ marginRight: "10px" }} /> {/* Add right margin to icon */}
+      <a
+        className="text-muted"
+        href="https://www.linkedin.com/in/gyan-sagar-srivastava-b7422419b/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none" }}
       >
-        <div className="col-1">
-          <FaLinkedin />
-        </div>
-        <div className="col-10">
-          <a
-            className="text-muted"
-            href="https://www.linkedin.com/in/karanmanral29/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            karanmanral29
-          </a>
-        </div>
-      </div>
+        gyansrivastava29
+      </a>
+  </div>
+</div>
       <div
         className="row m-2"
         style={{ borderBottom: "2px solid black", padding: 0 }}
@@ -41,12 +38,12 @@ function Contact() {
         <div className="col-10">
           <a
             className="text-muted"
-            href="https://github.com/karanmanral"
+            href="https://github.com/Gyansri2928"
             target="_blank"
             rel="noopener noreferrer"
             style={{ textDecoration: "none" }}
           >
-            KaranManral
+            GyanSri2928
           </a>
         </div>
       </div>
@@ -60,29 +57,10 @@ function Contact() {
         <div className="col-10">
           <a
             className="text-muted"
-            href="mailto:karanmanral29@gmail.com"
+            href="mailto:gyansri28@gmail.com"
             style={{ textDecoration: "none" }}
           >
-            karanmanral29@gmail.com
-          </a>
-        </div>
-      </div>
-      <div
-        className="row m-2"
-        style={{ borderBottom: "2px solid black", padding: 0 }}
-      >
-        <div className="col-1">
-          <FaGlobe />
-        </div>
-        <div className="col-10">
-          <a
-            className="text-muted"
-            href="https://trywebsoft-5zaipspc5-karanmanrals-projects.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            Try Web Soft
+            gyansri28@gmail.com
           </a>
         </div>
       </div>

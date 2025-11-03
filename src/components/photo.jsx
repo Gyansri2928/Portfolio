@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../images/myphoto.webp";
+import pic from "../images/hey (2).jpg";
 
 function Photo() {
   return (
@@ -9,7 +9,7 @@ function Photo() {
         <div className="row" id="imgRow2"></div>
       </div>
       <div id="photoCol" className="col">
-        <img src={pic} id="photo" alt="Karan Singh Manral" />
+        <img src={pic} id="photo" alt="Gyan Sagar Srivastava" />
       </div>
     </div>
   );

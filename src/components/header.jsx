@@ -9,8 +9,30 @@ function Header(props) {
       inline: "center",
     });
   }
+
   return (
-    <nav className="navbar navbar-expand-lg" id="navbarTop">
+    // --- (1) ADDED 'sticky-top' TO MAKE THE HEADER STICK ---
+    <nav className="navbar navbar-expand-lg sticky-top" id="navbarTop">
+      
+      {/* --- (2) ADDED CONDITIONAL NAME BLOCK --- */}
+      {props.isScrolled && (
+        <a
+          className="navbar-brand"
+          href="#!"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          style={{
+            marginLeft: "1rem",
+            fontWeight: 500, // Or "bold"
+            fontSize: "calc(12px + 1vw)",
+          }}
+        >
+          Gyan Sagar Srivastava
+        </a>
+      )}
+
       <button
         className="navbar-toggler m-2 bg-white"
         type="button"
@@ -35,7 +57,8 @@ function Header(props) {
               href="#!"
               onClick={(e) => {
                 e.preventDefault();
-                window.scrollTo(0, 0);
+                // --- (3) Added 'smooth' behavior for a nicer scroll ---
+                window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
               Home
@@ -60,7 +83,11 @@ function Header(props) {
                 if (props.isMobile) goToModule(e, "education");
                 else {
                   e.preventDefault();
-                  window.scrollTo(0, document.body.scrollHeight);
+                  // --- (3) Added 'smooth' behavior ---
+                  window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth",
+                  });
                 }
               }}
             >
